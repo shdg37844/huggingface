@@ -1,0 +1,860 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 头部header */
+.page-header {
+    margin: 0 auto;
+    height: 64px;
+    border-bottom: 1px solid rgb(243, 244, 246);
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    width: 1536px;
+    height: 64px;
+}
+
+.header-section .header-left {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 753.19px;
+    height: 64px;
+}
+
+.header-section .header-left .left-combine {
+    display: flex;
+    justify-content: start;
+    margin-right: 24px;
+    text-decoration: none;
+}
+
+.header-section .header-left .left-combine img {
+    display: block;
+    margin-right: 0.5rem;
+    width: 1.75rem;
+    height: 25.922px;
+}
+
+.header-section .header-left .left-combine span {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    color: black;
+
+}
+
+.header-section .header-left .left-input {
+    padding: 8px 12px 8px 32px;
+    width: 384px;
+    height: 36px;
+    font-size: 16px;
+    border: 1px solid rgb(229, 231, 235);
+    border-radius: 8px;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.header-section .header-left .left-input:focus {
+    border: 1px solid blue;
+    outline: none;
+}
+
+.header-section .header-right {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    width: 750.81px;
+    height: 64px;
+
+}
+
+.header-section .header-right a {
+    text-decoration: none;
+    font-family: Source Sans Pro, ui-sans-serif, system-ui,
+        -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+        Helvetica Neue, Arial, Noto Sans, sans-serif,
+        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    color: rgb(75 85 99);
+    font-size: 13px;
+}
+
+.header-section .header-right li {
+    list-style: none;
+}
+
+.right-line {
+    margin-left: 8px;
+    width: 0.125rem;
+    height: 1.25rem;
+    background-color: rgb(243 244 246);
+}
+
+.right-models {
+    padding: 2px 8px;
+    width: 85.91px;
+    height: 28px;
+}
+
+.right-models .models-hover:hover {
+    color: rgb(162, 162, 226);
+}
+
+.right-datasets .datasets-hover:hover {
+    color: rgb(228, 77, 77);
+}
+
+.right-spaces .spaces-hover:hover {
+    color: rgb(55, 58, 226);
+}
+
+.right-docs .docs-hover:hover {
+    color: rgb(157, 165, 39);
+}
+
+.right-solutions .solutions-hover:hover {
+    color: rgb(64, 172, 60);
+}
+
+.right-pricing .pricing-hover:hover {
+    color: rgb(172, 179, 173);
+}
+
+.right-datasets {
+    padding: 2px 8px;
+    margin-left: 8px;
+    width: 95.25px;
+    height: 28px;
+}
+
+.right-spaces {
+    padding: 2px 8px;
+    margin-left: 8px;
+    width: 84.88px;
+    height: 28px;
+}
+
+
+.right-docs {
+    padding: 2px 8px;
+    margin-left: 8px;
+    width: 70.52px;
+    height: 28px;
+}
+
+.right-solutions {
+    padding: 2px 8px;
+    margin-left: 8px;
+    width: 101.48px;
+    height: 28px;
+}
+
+.right-pricing {
+    padding: 2px 8px;
+    margin-left: 8px;
+    width: 62.59px;
+    height: 28px;
+}
+
+
+.right-icon {
+    padding: 2px 8px;
+    margin-left: 8px;
+    width: 42px;
+    height: 20px;
+}
+
+.right-login {
+    padding: 2px 8px;
+    margin-left: 8px;
+    width: 56.48px;
+    height: 28px;
+}
+
+.right-signup {
+    padding: 2px 12px;
+    margin-left: 8px;
+    width: 77.7px;
+    height: 30px;
+    border: 1px solid rgb(17, 24, 39);
+    border-radius: 9999px;
+    background-color: rgb(17, 24, 39);
+}
+
+.right-signup:hover {
+    background-color: #fff;
+}
+
+.header-section .header-right .signup-btn {
+    font-size: 12px;
+    color: white;
+}
+
+.header-section .header-right .signup-btn:hover {
+    color: black;
+}
+
+
+/* 主体部分mainer */
+
+/* welcome部分 */
+
+.page-mainer .welcome-section {
+    width: 100%;
+    height: 995px;
+    border-bottom: 1px solid transparent;
+}
+
+.page-mainer .welcome-section .welcome-container {
+    margin: 0 auto;
+    width: 1152px;
+    height: 994px;
+    padding: 64px 8px 0px 8px;
+    border-top: 1px solid transparent;
+}
+
+.welcome-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.welcome-top .welcome-top-info {
+    margin-top: 160px;
+    width: 675.19px;
+    height: 296px;
+}
+
+.welcome-top .welcome-top-info .welcome-top-title {
+    display: block;
+    margin-bottom: 40px;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 900;
+}
+
+.welcome-top .welcome-top-info .welcome-top-content {
+    width: 512px;
+    height: 84px;
+    margin-bottom: 48px;
+    font-size: 1.25rem;
+    font-family: Source Sans Pro, ui-sans-serif, system-ui,
+        -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue,
+        Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+        Segoe UI Symbol, Noto Color Emoji;
+    color: #6B7280;
+    line-height: 1.75rem;
+}
+
+.welcome-top-info .welcome-top-btn {
+    padding: 6px 16px;
+    width: 171.47px;
+    height: 44px;
+    border: 2px solid rgb(229, 231, 235);
+    border-radius: 8px;
+}
+
+.welcome-top .welcome-top-logo {
+    padding: 8px;
+    margin-right: 128.406px;
+    width: 188px;
+    height: 623px;
+}
+
+.welcome-top .welcome-top-logo img {
+    width: 172px;
+    height: 607px;
+}
+
+.welcome-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 48px 16px;
+    width: 1136px;
+    height: 222px;
+}
+
+.welcome-center .welcome-center-title {
+    margin: 8px 0px 24px 0px;
+    padding: 0 10px;
+    width: 389.64px;
+    height: 24px;
+    font-size: 14px;
+    font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+        sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    color: rgb(156, 163, 175);
+}
+
+.welcome-center .welcome-center-pics {
+    display: flex;
+    justify-content: space-between;
+    width: 1104px;
+}
+
+.welcome-center-pics .pics-google {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 188.8px;
+    height: 70px;
+}
+
+.welcome-center-pics .pics-google img {
+    width: 118.25px;
+    height: 40px;
+}
+
+.welcome-center-pics .pics-elastic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 188.8px;
+    height: 70px;
+}
+
+.welcome-center-pics .pics-elastic img {
+    width: 132.3px;
+    height: 45px;
+}
+
+.welcome-center-pics .pics-salesforce {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 188.8px;
+    height: 70px;
+}
+
+.welcome-center-pics .pics-salesforce img {
+    width: 100.11px;
+    height: 70px;
+}
+
+.welcome-center-pics .pics-writer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 188.8px;
+    height: 70px;
+}
+
+.welcome-center-pics .pics-writer img {
+    width: 110px;
+    height: 35px;
+}
+
+.welcome-center-pics .pics-grammarly {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 188.81px;
+    height: 70px;
+}
+
+.welcome-center-pics .pics-grammarly img {
+    width: 170px;
+    height: 39.8px;
+}
+
+.welcome-bottom {
+    text-align: center;
+}
+
+.welcome-bottom img {
+    width: 20px;
+    height: 20px;
+}
+
+/* ML部分 */
+.ml-section {
+    padding: 128px 0px;
+    height: 2549.38px;
+    border-top: 1px solid rgb(243, 244, 246);
+}
+
+.ml-container {
+    margin: 0 auto;
+    padding: 0 16px;
+    width: 1280px;
+    height: 2292.38px;
+
+}
+
+.ml-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.ml-header .ml-header-title {
+    font-weight: 700px;
+    font-size: 36px;
+    font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial,
+        Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+        Segoe UI Symbol, Noto Color Emoji;
+}
+
+.ml-header p {
+    margin-top: 16px;
+    color: rgb(107, 114, 128);
+    font-size: 18px;
+}
+
+.ml-container .ml-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 48px 0px;
+}
+
+.ml-container .ml-info img {
+    border-radius: 0.75rem;
+    box-shadow: 0 24px 32px rgba(0, 0, 0, .04), 0 16px 24px rgba(0, 0, 0, .04), 0 4px 8px rgba(0, 0, 0, .04), 0 0 1px rgba(0, 0, 0, .04);
+}
+
+.ml-info-box {
+    margin-top: 53px;
+    width: 560px;
+    height: 196px;
+}
+
+.ml-info-title {
+    display: block;
+    margin-bottom: 24px;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: Source Sans Pro, ui-sans-serif, system-ui,
+        -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue,
+        Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+        Segoe UI Symbol, Noto Color Emoji;
+}
+
+.ml-info p {
+    margin: 0px 0px 24px 0px;
+    font-size: 18px;
+    color: #6B7280;
+    line-height: 1.75rem;
+}
+
+.ml-info-1-pic {
+    width: 560px;
+    height: 296.047px;
+}
+
+.ml-info-2-pic {
+    width: 560px;
+    height: 293.906px;
+}
+
+.ml-info-3-pic {
+    width: 560px;
+    height: 307.953px;
+}
+
+.ml-info-4-pic {
+    width: 560px;
+    height: 418.891px;
+}
+
+.ml-info-5-pic {
+    width: 560px;
+    height: 347.578px;
+}
+
+/* discussion部分 */
+.discussion-section {
+    padding: 128px 0px;
+    height: 927.61px;
+    border-top: 1px solid rgb(243, 244, 246);
+}
+
+.discussion-container {
+    margin: 0 auto;
+    padding: 0 16px;
+    width: 1280px;
+    height: 670.61px;
+}
+
+.discussion-header {
+    margin-bottom: 64px;
+    text-align: center;
+}
+
+.discussion-header-title {
+    font-weight: 700;
+    font-size: 2.25rem;
+}
+
+.discussion-header p {
+    margin-top: 16px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: rgb(107, 114, 128);
+}
+
+.discussion-text {
+    margin: 16px 0;
+    color: rgb(107 114 128);
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    text-align: center;
+}
+
+.discussion-pic {
+    margin: 24px 0px;
+    border-radius: 0.75rem;
+    box-shadow: 0 24px 32px rgba(0, 0, 0, .04), 0 16px 24px rgba(0, 0, 0, .04), 0 4px 8px rgba(0, 0, 0, .04), 0 0 1px rgba(0, 0, 0, .04);
+}
+
+.discussion-pic img {
+    width: 1248px;
+    height: 378.609px;
+}
+
+.discussion-container .discussion-btn {
+    text-align: center;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.discussion-container .discussion-btn .discussion-btn-link {
+    text-decoration: none;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(229, 231, 235);
+    width: 283.19px;
+    height: 40px;
+}
+
+/* security部分 */
+.security-section {
+    padding: 128px 0px;
+    height: 1284.41px;
+    border-top: 1px solid rgb(243, 244, 246);
+}
+
+.security-container {
+    margin: 0 auto;
+    padding: 0 16px;
+    width: 1280px;
+    height: 1027.41px;
+}
+
+.security-header {
+    margin-bottom: 64px;
+    text-align: center;
+}
+
+.security-header-title {
+    font-weight: 700;
+    font-size: 2.25rem;
+}
+
+.security-header p {
+    margin-top: 16px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: rgb(107, 114, 128);
+}
+
+.security-text {
+    margin: 16px 0;
+    color: rgb(107 114 128);
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    text-align: center;
+}
+
+.security-pic {
+    display: block;
+    width: 1248px;
+    height: 623.41px;
+    padding: 24px 0px;
+}
+
+.security-pic img {
+    width: 1248px;
+    height: 575.41px;
+}
+
+.security-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 112px 0px 112px;
+    width: 1248px;
+    height: 156px;
+}
+
+.security-container .security-bottom .security-bottom-left p {
+    width: 492px;
+    height: 124px;
+    text-align: right;
+    line-height: 124px;
+    font-size: 1.5rem;
+    color: rgb(107 114 128);
+    font-weight: 700;
+}
+
+.security-bottom-right {
+    display: flex;
+    justify-content: start;
+    width: 492px;
+    height: 124px;
+    color: rgb(107 114 128);
+    font-size: 16px;
+}
+
+.security-bottom-right .right-gdpr {
+    margin-right: 48px;
+
+}
+
+.security-bottom-right .right-gdpr img {
+    width: 100px;
+    height: 100px;
+}
+
+.security-bottom-right .right-soc2 img {
+    width: 100.547px;
+    height: 99.984px;
+}
+
+/* upgrade部分 */
+.upgrade-section {
+    padding: 128px 0px;
+    height: 845px;
+    border-top: 1px solid rgb(243, 244, 246);
+}
+
+.upgrade-container {
+    margin: 0 auto;
+    padding: 0 16px;
+    width: 1280px;
+    height: 588px;
+}
+
+.upgrade-header {
+    margin-bottom: 64px;
+    text-align: center;
+}
+
+.upgrade-header-title {
+    font-weight: 700;
+    /* font-size: 2.25rem; */
+}
+
+.text-rule {
+    margin-top: 7px;
+    border: 2px dotted rgb(209 213 219);
+    border-radius: 0.75rem;
+    box-shadow: 0 24px 32px rgba(0, 0, 0, .04), 0 16px 24px rgba(0, 0, 0, .04), 0 4px 8px rgba(0, 0, 0, .04), 0 0 1px rgba(0, 0, 0, .04);
+}
+
+
+
+.upgrade-header p {
+    margin-top: 16px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: rgb(107, 114, 128);
+}
+
+.upgrade-text {
+    display: flex;
+    justify-content: space-between;
+    width: 1248px;
+    height: 440px;
+}
+
+.upgrade-text-left,
+.upgrade-text-right {
+    width: 584px;
+    height: 440px;
+}
+
+.upgrade-text-title {
+    color: rgb(107, 114, 128);
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.text-rule .rule-item-top {
+    padding: 48px 48px 32px 48px;
+    width: 580px;
+    height: 136px;
+}
+
+.text-rule .rule-item-follow {
+    padding: 0px 48px 32px 48px;
+    width: 580px;
+    height: 88px;
+}
+
+.text-rule .rule-item-top,
+.text-rule .rule-item-follow {
+    display: flex;
+}
+
+.text-rule .rule-item-icon {
+    margin-right: 15px;
+    width: 65.91px;
+    height: 48px;
+    font-size: 48px;
+    line-height: 48px;
+}
+
+.text-rule .rule-item-word {
+    color: rgb(107 114 128);
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+/* form部分 */
+.form-section {
+    height: 969.094px;
+    border-top: 1px solid rgb(243, 244, 246);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 0 auto;
+    padding: 80px 16px;
+    width: 896px;
+    height: 969.094px;
+    border-top: 1px solid rgb(243, 244, 246);
+    text-align: center;
+}
+
+.form-logo {
+    text-align: center;
+}
+
+.form-logo img {
+    margin-bottom: 16px;
+    width: 80px;
+    height: 74.094px;
+}
+
+.form-title {
+    margin-bottom: 32px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.form-content {
+    margin-bottom: 32px;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: rgb(107 114 128);
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.form-input {
+    padding: 8px 12px;
+    margin-top: 10px;
+    width: 368px;
+    height: 44px;
+    border: 2px solid rgb(229, 231, 235);
+    border-radius: 6px;
+}
+
+.form-input-last {
+    padding: 8px 12px;
+    margin-top: 10px;
+    width: 368px;
+    height: 140px;
+    border: 2px solid rgb(229, 231, 235);
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+.form-bottom {
+    margin-top: 16px;
+}
+
+.form-btn {
+    padding: 6px 16px;
+    margin: 16px 0px 8px 0px;
+    width: 168.7px;
+    height: 42px;
+    border: 1px solid rgb(229, 231, 235);
+    border-radius: 8px;
+    line-height: 1.75rem;
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.form-bottom p {
+    margin-left: 0.75rem;
+    color: rgb(156 163 175);
+
+}
+
+/* 底部footer */
+.page-footer {
+    border-top: 1px solid rgb(243, 244, 246);
+    height: 437px;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 48px 16px 128px 16px;
+    width: 1536px;
+    height: 436px;
+}
+
+.footer-container {
+    width: 352px;
+    height: 260px;
+}
+
+.footer-container li {
+    list-style: none;
+    line-height: 1.75rem;
+}
+
+.footer-container li a {
+    text-decoration: none;
+    color: rgb(75 85 99);
+}
+
+.footer-container li a:hover {
+    text-decoration: underline;
+}
+
+.footer-title {
+    margin-bottom: 16px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.75rem;
+}
