@@ -9,6 +9,8 @@ body {
     height: 100%;
 }
 
+
+
 body {
     display: flex;
     flex-direction: column;
@@ -27,6 +29,10 @@ body {
     padding: 0 16px;
     width: 1536px;
     height: 64px;
+}
+
+.header-section svg {
+    color: rgb(156 163 175);
 }
 
 .header-section .header-left {
@@ -52,11 +58,22 @@ body {
 }
 
 .header-section .header-left .left-combine span {
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 700;
     line-height: 1.75rem;
     color: black;
+    font-family: Source San Pro;
 
+}
+
+.header-section .header-left .left-input-combine {
+    position: relative;
+}
+
+.left-input-combine .left-input-svg {
+    position: absolute;
+    top: 30%;
+    left: 0.625rem;
 }
 
 .header-section .header-left .left-input {
@@ -64,8 +81,10 @@ body {
     width: 384px;
     height: 36px;
     font-size: 16px;
+    font-family: Source Sans Regular;
     border: 1px solid rgb(229, 231, 235);
     border-radius: 8px;
+    --tw-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
         var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
@@ -86,13 +105,12 @@ body {
 
 .header-section .header-right a {
     text-decoration: none;
-    font-family: Source Sans Pro, ui-sans-serif, system-ui,
-        -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-        Helvetica Neue, Arial, Noto Sans, sans-serif,
-        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-family: Source Sans Regular;
     color: rgb(75 85 99);
-    font-size: 13px;
+    font-size: 16px;
 }
+
+
 
 .header-section .header-right li {
     list-style: none;
@@ -102,6 +120,7 @@ body {
     margin-left: 8px;
     width: 0.125rem;
     height: 1.25rem;
+    color: rgb(240, 240, 240);
     background-color: rgb(243 244 246);
 }
 
@@ -109,6 +128,46 @@ body {
     padding: 2px 8px;
     width: 85.91px;
     height: 28px;
+}
+
+.models-hover {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.datasets-hover {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.spaces-hover {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.docs-hover {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.solutions-hover {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.pricing-hover {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .right-models .models-hover:hover {
@@ -179,6 +238,17 @@ body {
     height: 20px;
 }
 
+.right-icon-btn {
+    border-style: none;
+    background: transparent;
+}
+
+.right-icon-svg {
+    width: 20px;
+    height: 16px;
+    color: rgb(107, 114, 128);
+}
+
 .right-login {
     padding: 2px 8px;
     margin-left: 8px;
@@ -201,7 +271,7 @@ body {
 }
 
 .header-section .header-right .signup-btn {
-    font-size: 12px;
+    font-size: 16px;
     color: white;
 }
 
@@ -217,7 +287,8 @@ body {
 .page-mainer .welcome-section {
     width: 100%;
     height: 995px;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid rgb(243, 244, 246);
+    background: linear-gradient(to bottom, #ffff, #f9fafb);
 }
 
 .page-mainer .welcome-section .welcome-container {
@@ -245,6 +316,10 @@ body {
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 900;
+    font-family: Source Sans Pro, ui-sans-serif, system-ui,
+        -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue,
+        Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+        Segoe UI Symbol, Noto Color Emoji;
 }
 
 .welcome-top .welcome-top-info .welcome-top-content {
@@ -252,20 +327,27 @@ body {
     height: 84px;
     margin-bottom: 48px;
     font-size: 1.25rem;
-    font-family: Source Sans Pro, ui-sans-serif, system-ui,
-        -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue,
-        Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-        Segoe UI Symbol, Noto Color Emoji;
+    font-family: Source Sans Regular;
     color: #6B7280;
     line-height: 1.75rem;
 }
 
-.welcome-top-info .welcome-top-btn {
+
+.welcome-top-info .welcome-top-btn-box {
     padding: 6px 16px;
     width: 171.47px;
     height: 44px;
     border: 2px solid rgb(229, 231, 235);
     border-radius: 8px;
+    --tw-gradient-from: #fff var(--tw-gradient-from-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    background: linear-gradient(to bottom, #ffff, #f3f4f6);
+}
+
+
+.welcome-top-info .welcome-top-btn {
+    font-size: 19px;
+    font-family: Source Sans Regular;
 }
 
 .welcome-top .welcome-top-logo {
@@ -295,10 +377,8 @@ body {
     padding: 0 10px;
     width: 389.64px;
     height: 24px;
-    font-size: 14px;
-    font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,
-        BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
-        sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 16px;
+    font-family: Source Sans Regular;
     color: rgb(156, 163, 175);
 }
 
@@ -387,6 +467,7 @@ body {
     padding: 128px 0px;
     height: 2549.38px;
     border-top: 1px solid rgb(243, 244, 246);
+    background: linear-gradient(to bottom, #ffff, #f9fafb);
 }
 
 .ml-container {
@@ -405,10 +486,7 @@ body {
 .ml-header .ml-header-title {
     font-weight: 700px;
     font-size: 36px;
-    font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system,
-        BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial,
-        Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-        Segoe UI Symbol, Noto Color Emoji;
+    font-family: Source Sans Pro;
 }
 
 .ml-header p {
@@ -450,6 +528,7 @@ body {
     font-size: 18px;
     color: #6B7280;
     line-height: 1.75rem;
+    font-family: Source Sans Regular;
 }
 
 .ml-info-1-pic {
@@ -482,6 +561,7 @@ body {
     padding: 128px 0px;
     height: 927.61px;
     border-top: 1px solid rgb(243, 244, 246);
+    background: linear-gradient(to bottom, #ffff, #f9fafb);
 }
 
 .discussion-container {
@@ -536,10 +616,13 @@ body {
 .discussion-container .discussion-btn .discussion-btn-link {
     text-decoration: none;
     align-items: center;
+    font-family: Source Sans Regular;
+    font-size: 16px;
     border-radius: 0.5rem;
     border: 1px solid rgb(229, 231, 235);
     width: 283.19px;
     height: 40px;
+    background: linear-gradient(to bottom, #f9fafb, #e5e7eb);
 }
 
 /* security部分 */
@@ -547,6 +630,7 @@ body {
     padding: 128px 0px;
     height: 1284.41px;
     border-top: 1px solid rgb(243, 244, 246);
+    background: linear-gradient(to bottom, #ffff, #f9fafb);
 }
 
 .security-container {
@@ -571,6 +655,7 @@ body {
     font-size: 1.125rem;
     line-height: 1.75rem;
     color: rgb(107, 114, 128);
+    font-family: Source Sans Regular;
 }
 
 .security-text {
@@ -579,6 +664,7 @@ body {
     font-size: 1.25rem;
     line-height: 1.75rem;
     text-align: center;
+    font-family: Source Sans Regular;
 }
 
 .security-pic {
@@ -640,6 +726,7 @@ body {
     padding: 128px 0px;
     height: 845px;
     border-top: 1px solid rgb(243, 244, 246);
+    background: linear-gradient(to bottom, #ffff, #f9fafb);
 }
 
 .upgrade-container {
@@ -656,12 +743,14 @@ body {
 
 .upgrade-header-title {
     font-weight: 700;
-    /* font-size: 2.25rem; */
+    font-size: 2.25rem;
+    font-family: Source Sans Pro;
 }
 
 .text-rule {
     margin-top: 7px;
     border: 2px dotted rgb(209 213 219);
+    font-family: Source Sans Regular;
     border-radius: 0.75rem;
     box-shadow: 0 24px 32px rgba(0, 0, 0, .04), 0 16px 24px rgba(0, 0, 0, .04), 0 4px 8px rgba(0, 0, 0, .04), 0 0 1px rgba(0, 0, 0, .04);
 }
@@ -673,6 +762,7 @@ body {
     font-size: 1.125rem;
     line-height: 1.75rem;
     color: rgb(107, 114, 128);
+    font-family: Source Sans Regular;
 }
 
 .upgrade-text {
@@ -728,19 +818,19 @@ body {
 
 /* form部分 */
 .form-section {
-    height: 969.094px;
+    height: 966.094px;
     border-top: 1px solid rgb(243, 244, 246);
+    background: linear-gradient(to bottom, #ffff, #f9fafb);
 }
 
 .form-container {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     margin: 0 auto;
     padding: 80px 16px;
     width: 896px;
-    height: 969.094px;
+    height: 965.094px;
     border-top: 1px solid rgb(243, 244, 246);
     text-align: center;
 }
@@ -761,6 +851,7 @@ body {
     font-weight: 900;
     font-size: 3rem;
     line-height: 1;
+    font-family: Source Sans Pro, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 .form-content {
@@ -798,24 +889,35 @@ body {
 
 .form-bottom {
     margin-top: 16px;
+    /* text-align: center; */
+    width: 368px;
+    height: 86px;
+}
+
+.form-btn-box {
+    padding: 4px 12px;
+    margin: 32px auto 8px auto;
+    width: 160.7px;
+    height: 38px;
+    border: 1px solid rgb(229, 231, 235);
+    border-radius: 8px;
+    /* line-height: 1.75rem; */
+    background: linear-gradient(to bottom, #ffff, #f3f4f6);
 }
 
 .form-btn {
-    padding: 6px 16px;
-    margin: 16px 0px 8px 0px;
-    width: 168.7px;
-    height: 42px;
-    border: 1px solid rgb(229, 231, 235);
-    border-radius: 8px;
-    line-height: 1.75rem;
+    font-family: Source Sans Regular;
     font-weight: 400;
-    background-color: rgba(0, 0, 0, 0);
+    font-size: 19px;
+    text-decoration: none;
+    color: rgb(31, 41, 55);
+    background: linear-gradient(to bottom, #ffff, #f3f4f6);
 }
 
 .form-bottom p {
     margin-left: 0.75rem;
     color: rgb(156 163 175);
-
+    font-family: Source Sans Regular;
 }
 
 /* 底部footer */
@@ -840,12 +942,13 @@ body {
 
 .footer-container li {
     list-style: none;
-    line-height: 1.75rem;
+    line-height: 2;
 }
 
 .footer-container li a {
     text-decoration: none;
     color: rgb(75 85 99);
+    font-family: Source Sans Regular;
 }
 
 .footer-container li a:hover {
@@ -856,5 +959,6 @@ body {
     margin-bottom: 16px;
     font-size: 1.125rem;
     font-weight: 600;
-    line-height: 1.75rem;
+    line-height: 1.5;
+    font-family: Source Sans Regular;
 }
