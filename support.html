@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Acceleration Program - Hugging Face</title>
+    <link rel="stylesheet" href="supportstyle.css">
+    <style>
+        @font-face {
+            font-family: Source San Pro;
+            src: url(font/SourceSansPro-Black.ttf);
+        }
+
+        @font-face {
+            font-family: Source Sans Regular;
+            src: url(font/SourceSansPro-Regular.ttf);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 头部header -->
+    <header class="page-header">
+        <div class="header-section">
+            <div class="header-left">
+                <a class="left-combine" href="javascript:;">
+                    <img src="images/huggingface_logo-noborder.svg">
+                    <span>Hugging Face</span>
+                </a>
+                <div class="left-input-combine">
+                    <input class="left-input" type="text" placeholder="Search models, datasets, users...">
+                    <svg class="left-input-svg" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img"
+                        width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
+                        <path d="M30 28.59L22.45 21A11 11 0 1 0 21 22.45L28.59 30zM5 14a9 9 0 1 1 9 9a9 9 0 0 1-9-9z"
+                            fill="currentColor">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+
+            <ul class="header-right">
+                <li class="right-models"><a class="models-hover" href="javascript:;">
+                        <svg class="mr-1.5 text-gray-400 group-hover:text-indigo-500" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img"
+                            width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                            <path class="uim-quaternary"
+                                d="M20.23 7.24L12 12L3.77 7.24a1.98 1.98 0 0 1 .7-.71L11 2.76c.62-.35 1.38-.35 2 0l6.53 3.77c.29.173.531.418.7.71z"
+                                opacity=".25" fill="currentColor"></path>
+                            <path class="uim-tertiary"
+                                d="M12 12v9.5a2.09 2.09 0 0 1-.91-.21L4.5 17.48a2.003 2.003 0 0 1-1-1.73v-7.5a2.06 2.06 0 0 1 .27-1.01L12 12z"
+                                opacity=".5" fill="currentColor"></path>
+                            <path class="uim-primary"
+                                d="M20.5 8.25v7.5a2.003 2.003 0 0 1-1 1.73l-6.62 3.82c-.275.13-.576.198-.88.2V12l8.23-4.76c.175.308.268.656.27 1.01z"
+                                fill="currentColor"></path>
+                        </svg>
+                        Models</a></li>
+                <li class="right-datasets"><a class="datasets-hover" href="javascript:;">
+                        <svg class="mr-1.5 text-gray-400 group-hover:text-red-500" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img"
+                            width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 25 25">
+                            <ellipse cx="12.5" cy="5" fill="currentColor" fill-opacity="0.25" rx="7.5" ry="2"></ellipse>
+                            <path
+                                d="M12.5 15C16.6421 15 20 14.1046 20 13V20C20 21.1046 16.6421 22 12.5 22C8.35786 22 5 21.1046 5 20V13C5 14.1046 8.35786 15 12.5 15Z"
+                                fill="currentColor" opacity="0.5"></path>
+                            <path
+                                d="M12.5 7C16.6421 7 20 6.10457 20 5V11.5C20 12.6046 16.6421 13.5 12.5 13.5C8.35786 13.5 5 12.6046 5 11.5V5C5 6.10457 8.35786 7 12.5 7Z"
+                                fill="currentColor" opacity="0.5"></path>
+                            <path
+                                d="M5.23628 12C5.08204 12.1598 5 12.8273 5 13C5 14.1046 8.35786 15 12.5 15C16.6421 15 20 14.1046 20 13C20 12.8273 19.918 12.1598 19.7637 12C18.9311 12.8626 15.9947 13.5 12.5 13.5C9.0053 13.5 6.06886 12.8626 5.23628 12Z"
+                                fill="currentColor"></path>
+                        </svg>
+                        Datasets</a>
+                </li>
+                <li class="right-spaces"><a class="spaces-hover" href="javascript:;">
+                        <svg class="mr-1.5 text-gray-400 group-hover:text-blue-500" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img"
+                            width="1em" height="1em" viewBox="0 0 25 25">
+                            <path opacity=".5"
+                                d="M6.016 14.674v4.31h4.31v-4.31h-4.31ZM14.674 14.674v4.31h4.31v-4.31h-4.31ZM6.016 6.016v4.31h4.31v-4.31h-4.31Z"
+                                fill="currentColor"></path>
+                            <path opacity=".75" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3 4.914C3 3.857 3.857 3 4.914 3h6.514c.884 0 1.628.6 1.848 1.414a5.171 5.171 0 0 1 7.31 7.31c.815.22 1.414.964 1.414 1.848v6.514A1.914 1.914 0 0 1 20.086 22H4.914A1.914 1.914 0 0 1 3 20.086V4.914Zm3.016 1.102v4.31h4.31v-4.31h-4.31Zm0 12.968v-4.31h4.31v4.31h-4.31Zm8.658 0v-4.31h4.31v4.31h-4.31Zm0-10.813a2.155 2.155 0 1 1 4.31 0 2.155 2.155 0 0 1-4.31 0Z"
+                                fill="currentColor"></path>
+                            <path opacity=".25" d="M16.829 6.016a2.155 2.155 0 1 0 0 4.31 2.155 2.155 0 0 0 0-4.31Z"
+                                fill="currentColor"></path>
+                        </svg>Spaces</a>
+                </li>
+                <li class="right-docs"><a class="docs-hover" href="javascript:;">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            aria-hidden="true" role="img" class="mr-1.5 text-gray-400 group-hover:text-yellow-500"
+                            width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
+                            <path opacity="0.5"
+                                d="M20.9022 5.10334L10.8012 10.8791L7.76318 9.11193C8.07741 8.56791 8.5256 8.11332 9.06512 7.7914L15.9336 3.73907C17.0868 3.08811 18.5002 3.26422 19.6534 3.91519L19.3859 3.73911C19.9253 4.06087 20.5879 4.56025 20.9022 5.10334Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M10.7999 10.8792V28.5483C10.2136 28.5475 9.63494 28.4139 9.10745 28.1578C8.5429 27.8312 8.074 27.3621 7.74761 26.7975C7.42122 26.2327 7.24878 25.5923 7.24756 24.9402V10.9908C7.25062 10.3319 7.42358 9.68487 7.74973 9.1123L10.7999 10.8792Z"
+                                fill="currentColor" fill-opacity="0.75"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M21.3368 10.8499V6.918C21.3331 6.25959 21.16 5.61234 20.8346 5.03949L10.7971 10.8727L10.8046 10.874L21.3368 10.8499Z"
+                                fill="currentColor"></path>
+                            <path opacity="0.5"
+                                d="M21.7937 10.8488L10.7825 10.8741V28.5486L21.7937 28.5234C23.3344 28.5234 24.5835 27.2743 24.5835 25.7335V13.6387C24.5835 12.0979 23.4365 11.1233 21.7937 10.8488Z"
+                                fill="currentColor"></path>
+                        </svg>
+                        Docs</a></li>
+                <li class="right-solutions"><a class="solutions-hover" href="javascript:;">
+                        <svg class="mr-1.5 text-gray-400 group-hover:text-green-500" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img"
+                            width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                            <path class="uim-tertiary"
+                                d="M19 6H5a3 3 0 0 0-3 3v2.72L8.837 14h6.326L22 11.72V9a3 3 0 0 0-3-3z" opacity=".5"
+                                fill="currentColor"></path>
+                            <path class="uim-primary"
+                                d="M10 6V5h4v1h2V5a2.002 2.002 0 0 0-2-2h-4a2.002 2.002 0 0 0-2 2v1h2zm-1.163 8L2 11.72V18a3.003 3.003 0 0 0 3 3h14a3.003 3.003 0 0 0 3-3v-6.28L15.163 14H8.837z"
+                                fill="currentColor"></path>
+                        </svg>
+                        Solutions</a></li>
+                <li class="right-pricing"><a class="pricing-hover" href="javascript:;">Pricing</a></li>
+                <li class="right-icon">
+                    <button class="right-icon-btn" type="button">
+                        <svg class="right-icon-svg" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img"
+                            width="1em" height="1em" viewBox="0 0 32 18" preserveAspectRatio="xMidYMid meet">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.4504 3.30221C14.4504 2.836 14.8284 2.45807 15.2946 2.45807H28.4933C28.9595 2.45807 29.3374 2.836 29.3374 3.30221C29.3374 3.76842 28.9595 4.14635 28.4933 4.14635H15.2946C14.8284 4.14635 14.4504 3.76842 14.4504 3.30221Z"
+                                fill="currentColor"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.4504 9.00002C14.4504 8.53382 14.8284 8.15588 15.2946 8.15588H28.4933C28.9595 8.15588 29.3374 8.53382 29.3374 9.00002C29.3374 9.46623 28.9595 9.84417 28.4933 9.84417H15.2946C14.8284 9.84417 14.4504 9.46623 14.4504 9.00002Z"
+                                fill="currentColor"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.4504 14.6978C14.4504 14.2316 14.8284 13.8537 15.2946 13.8537H28.4933C28.9595 13.8537 29.3374 14.2316 29.3374 14.6978C29.3374 15.164 28.9595 15.542 28.4933 15.542H15.2946C14.8284 15.542 14.4504 15.164 14.4504 14.6978Z"
+                                fill="currentColor"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.94549 6.87377C2.27514 6.54411 2.80962 6.54411 3.13928 6.87377L6.23458 9.96907L9.32988 6.87377C9.65954 6.54411 10.194 6.54411 10.5237 6.87377C10.8533 7.20343 10.8533 7.73791 10.5237 8.06756L6.23458 12.3567L1.94549 8.06756C1.61583 7.73791 1.61583 7.20343 1.94549 6.87377Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </button>
+
+                <li>
+                    <hr class="right-line">
+                </li>
+                <li class="right-login"><a href="javascript:;">Log In</a></li>
+                <li class="right-signup"><a class="signup-btn" href="javascript:;">Sign Up</a></li>
+            </ul>
+
+        </div>
+
+    </header>
+
+    <!-- 主体部分mainer -->
+    <div class="page-mainer">
+        <!-- welcome-top部分 -->
+        <div class="welcome-top-section">
+            <div class="welcome-top-container">
+                <div class="welcome-top-left">
+                    <h2 class="welcome-top-title">
+                        Train your own LLMs
+                    </h2>
+                    <p class="welcome-top-content">
+                        Get guidance from our award-winning machine learning experts. We've put together a world-class
+                        team to help
+                        customers build better ML solutions, faster.
+                    </p>
+                    <div class="welcome-top-bottom">
+                        <div class="welcome-top-btn-box">
+                            <a class="welcome-top-btn">Request a Quote</a>
+                        </div>
+                        <p class="welcome-top-bottom-text">to accelerate your ML roadmap</p>
+                    </div>
+                </div>
+                <div class="welcome-top-pic-box">
+                    <img class="welcome-top-pic" src="images/rocket-transparent (1).png">
+                </div>
+            </div>
+        </div>
+
+        <!-- welcome-pics部分 -->
+        <div class="welcome-pics-section">
+            <div class="welcome-pics-container">
+                <div class="welcome-center-title">Join leading AI organizations already on Hugging Face</div>
+                <div class="welcome-center-pics">
+                    <div class="pics-google">
+                        <img src="images/google_logo.svg">
+                    </div>
+                    <div class="pics-elastic">
+                        <img src="images/elastic_logo.png">
+                    </div>
+                    <div class="pics-salesforce">
+                        <img src="images/Salesforce_logo.png">
+                    </div>
+                    <div class="pics-writer">
+                        <img src="images/writer-logo.svg">
+                    </div>
+                    <div class="pics-grammarly">
+                        <img src="images/grammarly_logo.png">
+                    </div>
+                </div>
+                <div class="welcome-bottom">
+                    <img src="images/arrow-down-sign-to-navigate.png">
+                </div>
+            </div>
+        </div>
+
+        <!-- guidance部分 -->
+        <div class="guidance-section">
+            <div class="guidance-container">
+                <h2 class="guidance-title">Expert Acceleration Program</h2>
+                <h3 class="guidance-subtitle">Get guidance from the Hugging Face team</h3>
+                <div class="guidance-textbox">
+                    <div class="guidance-info">
+                        <div class="guidance-info-pic">
+                            <img src="images/support.png">
+                        </div>
+                        <p class="guidance-info-title">Dedicated Support</p>
+                        <p class="guidance-info-text">A dedicated Machine Learning Engineer will guide your team in the
+                            implementation of the
+                            state-of-the-art in
+                            Transformer models.</p>
+                    </div>
+                    <div class="guidance-info">
+                        <div class="guidance-info-pic">
+                            <img src="images/brain.png">
+                        </div>
+                        <p class="guidance-info-title">Deep Technical Knowledge</p>
+                        <p class="guidance-info-text">From research to production, our experts answer questions and find
+                            solutions as needed in
+                            your machine
+                            learning journey.</p>
+                    </div>
+                    <div class="guidance-info">
+                        <div class="guidance-info-pic">
+                            <img src="images/collaboration.png">
+                        </div>
+                        <p class="guidance-info-title">Flexible Communication</p>
+                        <p class="guidance-info-text">We offer different communication channels to make it easy to seek
+                            expert guidance when and
+                            where it’s most
+                            convenient for you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- experts部分 -->
+        <div class="experts-section">
+            <div class="experts-container">
+                <h2 class="experts-title">Get Access to the Best Worldwide Experts in Transformer Models</h2>
+                <div class="experts-box">
+                    <div class="experts-box-left">
+                        <div>
+                            <b>Thomas Wolf</b>, creator of Transformers
+                        </div>
+                        <div>
+                            <b>Ross Wightman</b>, creator of timm (SOTA computer vision)
+                        </div>
+                        <div>
+                            <b>Colin Raffel</b>, first author of T5 from Google
+                        </div>
+                        <div>
+                            <b>Morgan Funtowicz</b>, contributor to ONNX
+                        </div>
+                        <div>
+                            <b>Abhishek Thakur</b>, worldwide expert on auto-ML
+                        </div>
+                        <div>
+                            <b>Victor Sanh</b>, author of DistilBERT
+                        </div>
+                        <div>
+                            <b>Anthony Moi</b>, creator of Tokenizers
+                        </div>
+                        <div>
+                            <b>Julien Simon</b>, author of “Learn Amazon SageMaker”
+                        </div>
+                        <div>
+                            <b>Meg Mitchell</b>, worldwide expert on bias and ethics in AI
+                        </div>
+                        <p>+40 more experts</p>
+                    </div>
+                    <div class="experts-box-right">
+                        <div class="experts-box-right01">
+                            <div class="experts-box-right-pics">
+                                <img src="images/expert-thomas.jpg" alt="">
+                            </div>
+                            <div class="experts-box-right-pics">
+                                <img src="images/expert-colin.jpg" alt="">
+                            </div>
+                            <div class="experts-box-right-pics">
+                                <img src="images/expert-morgan.jpg" alt="">
+                            </div>
+                            <div class="experts-box-right-pics">
+                                <img src="images/expert-abhishek.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="experts-box-right02">
+                            <div class="experts-box-right-pics">
+                                <img src="images/expert-victor.jpg" alt="">
+                            </div>
+                            <div class="experts-box-right-pics">
+                                <img src="images/expert-sasha.jpg" alt="">
+                            </div>
+                            <div class="experts-box-right-pics">
+                                <img src="images/expert-anthony.jpg" alt="">
+                            </div>
+                            <div class="experts-box-right-pics">
+                                <img src="images/expert-julien.jpg" alt="">
+                            </div>
+                            <div class="experts-box-right-pics">
+                                <img src="images/hf_experts_ross.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="experts-box-right03">
+                            <div class="experts-box-right-pics">
+                                <img src="images/expert-meg.jpg" alt="">
+                            </div>
+                            <div class="experts-box-right-pics">
+                                <img src="images/hf_expert_derek.jpg" alt="">
+                            </div>
+                            <div class="experts-box-right-pics">
+                                <img src="images/expert-yacine.jpg" alt="">
+                            </div>
+                            <div class="experts-box-right-pics">
+                                <img src="images/expert-sylvain.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- stories部分 -->
+        <div class="stories-section">
+            <div class="stories-container">
+                <h2 class="stories-title">Customer Success Stories</h2>
+                <h3 class="stories-subtitle">Learn how customers leverage the Expert Acceleration Program to accelerate
+                    their machine learning
+                    roadmaps
+                </h3>
+                <div class="stories-box">
+                    <div class="stories-box-top">
+                        <div class="stories-box-player">
+
+
+                        </div>
+                        <div class="stories-box-top-container">
+                            <h2 class="stories-box-top-title">Expert Acceleration Program for Healthcare</h2>
+                            <div class="stories-box-top-item01">
+                                <div class="stories-box-top-subtitle">Customer</div>
+                                <p>Sempre Health brings behavior-based, dynamic pricing to healthcare</p>
+                            </div>
+                            <div class="stories-box-top-item02">
+                                <div class="stories-box-top-subtitle">Machine Learning Tasks</div>
+                                <p>Automatically classify and respond inbound messages</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stories-box-bottom">
+                        <div class="stories-box-bottom-pic">
+                            <img src="images/swaraj-1.jpeg">
+                        </div>
+                        <div class="stories-box-bottom-text">
+                            <svg class="stories-box-bottom-text-svg" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false"
+                                role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
+                                viewBox="0 0 30 30">
+                                <path
+                                    d="M15.264 19.552C15.264 23.2 17.664 25.12 20.352 25.12C23.328 25.12 26.112 22.624 26.112 19.456C26.112 16.864 24.288 15.136 22.08 15.136C21.888 15.136 21.408 15.136 21.312 15.136C22.368 12.064 25.824 8.8 29.376 7.072L26.4 4C20.448 6.976 15.264 13.504 15.264 19.552ZM0 19.552C0 23.2 2.304 25.12 5.088 25.12C8.064 25.12 10.848 22.624 10.848 19.456C10.848 16.864 8.928 15.136 6.72 15.136C6.528 15.136 6.048 15.136 5.952 15.136C7.008 12.064 10.56 8.8 14.016 7.072L11.136 4C5.184 6.976 0 13.504 0 19.552Z"
+                                    fill="currentColor"></path>
+                            </svg>
+                            <blockquote class="stories-box-bottom-quote">This collaboration made a tremendous impact on
+                                our businesses's scalability and
+                                our operations teams's workflow. We
+                                launched our production NLP pipeline several weeks ago, and since then, we've seen more
+                                than 20% of incoming messages
+                                get automatically handled by our new system! These are messages that would've created a
+                                ticket for our operations team
+                                before, so we've reduced a lot of low-value work from our team.</blockquote>
+                            <div class="stories-box-bottom-last">
+                                <div class="stories-box-bottom-last-name">Swaraj Banerjee</div>
+                                <div class="stories-box-bottom-last-statue">Co-founder & CTO at Sempre Health</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- work部分 -->
+        <div class="work-section">
+            <div class="work-top">
+                <h2 class="work-top-title">How We Work</h2>
+                <h3 class="work-top-subtitle">An expert partner for your machine learning journey</h3>
+            </div>
+            <div class="work-content">
+                <p class="work-content-text">Success in machine learning depends on finding the best architecture for a
+                    use case, fine-tuning
+                    models, and
+                    deploying them to production. All these require the right combination of experience and skills. Our
+                    Expert
+                    Acceleration Program provides the necessary technical expertise to implement the state-of-the-art,
+                    make better
+                    decisions, and go to market faster.</p>
+                <div class="work-content-arrow">
+                    <img src="images/long-arrow-down.svg">
+                </div>
+                <div class="work-content-1">
+                    <div class="work-content-left01">
+                        <h2 class="work-content-title">How do I fine-tune a model for my use case?</h2>
+                        <p class="work-content-subtitle">Which base architectures? How much training data?</p>
+                    </div>
+                    <div></div>
+                </div>
+                <div class="work-content-2">
+                    <div class="work-content-left02">
+                        <h2 class="work-content-title">How do I optimize my model for minimum latency?</h2>
+                        <p class="work-content-subtitle">
+                            Distillation. Compilation. Quantization. Pruning.
+                            <br>
+                            We can guide you through every step.
+                        </p>
+                    </div>
+                    <div class="work-lib">
+                        <img src="images/lib-logos.png">
+                    </div>
+                </div>
+                <div class="work-content-3">
+                    <div class="work-content-left03">
+                        <h2 class="work-content-title">How do I optimize my production environment?</h2>
+                        <p class="work-content-subtitle">Tune your CPU, GPU or AI accelerator config for max
+                            performance.</p>
+                    </div>
+                    <div class="work-optimization">
+                        <img src="images/optimization-partners-3.png">
+                    </div>
+                </div>
+                <div class="work-content-4">
+                    <div class="work-content-left04">
+                        <h2 class="work-content-title">How do I use Transformers in SageMaker?</h2>
+                        <p class="work-content-subtitle">Model parallelism, data parallelism, deployment, and more.</p>
+                    </div>
+                    <div class="work-transformers">
+                        <img src="images/transformers-sage-logos.png">
+                    </div>
+                </div>
+                <div class="work-content-5">
+                    <div class="work-content-left05">
+                        <h2 class="work-content-title">How do I detect and mitigate bias in datasets and models?</h2>
+                        <p class="work-content-subtitle">We can help you make AI more responsible.</p>
+                    </div>
+                    <div class="work-mitigate">
+                        <img src="images/mitigate-bias.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- reason部分 -->
+        <div class="reason-section">
+            <div class="reason-container">
+                <h2 class="reason-title">Why Get Expert Guidance from the Hugging Face Team?</h2>
+                <div class="reason-box01">
+                    <div class="reason-box-img">
+                        <img src="images/plug.png" alt="">
+                    </div>
+                    <div class="reason-box-right">
+                        <h2 class="reason-box-title">Plug & play a team of experts in Transformer models</h2>
+                        <p class="reason-box-text">Need help with semantic search? Working on model optimization?
+                            Deploying on AWS? From research to
+                            production, our experts can help you throughout your machine learning roadmap.
+                        </p>
+                    </div>
+                </div>
+                <div class="reason-box02">
+                    <div class="reason-box-img">
+                        <img src="images/no-time.png" alt="">
+                    </div>
+                    <div class="reason-box-right">
+                        <h2 class="reason-box-title">Implement the state-of-the-art for your use case</h2>
+                        <p class="reason-box-text">Use the latest machine learning architectures and techniques to get
+                            the best performance out of your models.
+                            Our expert guidance extends beyond the Hugging Face libraries and into any models you are
+                            using.
+                        </p>
+                    </div>
+                </div>
+                <div class="reason-box03">
+                    <div class="reason-box-img">
+                        <img src="images/optimization.png" alt="">
+                    </div>
+                    <div class="reason-box-right">
+                        <h2 class="reason-box-title">Optimize for production</h2>
+                        <p class="reason-box-text">Ensure optimal performance of your models to run inferences at scale,
+                            in real-time. Our expert team will
+                            help you make models smaller and faster with minimal impact on accuracy.
+                        </p>
+                    </div>
+                </div>
+                <div class="reason-box04">
+                    <div class="reason-box-img">
+                        <img src="images/clock.png" alt="">
+                    </div>
+                    <div class="reason-box-right">
+                        <h2 class="reason-box-title">Faster go to market</h2>
+                        <p class="reason-box-text">Accelerate your business outcomes and decrease the time it takes to
+                            research, train, deploy and optimize
+                            machine learning solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ部分 -->
+        <div class="faq-section">
+            <div class="faq-top">
+                <h2 class="faq-title">FAQ</h2>
+            </div>
+            <div class="faq-content">
+                <div class="faq-content-left">
+                    <dl class="faq-content-left-first">
+                        <dt class="faq-content-title">What value does Expert Acceleration Program provide?</dt>
+                        <dd class="faq-content-text">EAP provides you with direct access to leading machine learning
+                            experts who are ready to
+                            help you accelerate
+                            your ML projects (wherever you are in the ML lifecycle).</dd>
+                    </dl>
+                    <dl>
+                        <dt class="faq-content-title">How do I interact with Hugging Face Experts?</dt>
+                        <dd class="faq-content-text">
+                            We provide Slfaq-content-textack-based support and custom sessions for addressing specific
+                            machine learning
+                            challenges. We
+                            also conduct the following sessions:
+                            <ul class="faq-content-text-item">
+                                <li>
+                                    <b>Scoping session:</b>
+                                    formalize your problem so our experts can recommend approaches, share best
+                                    practices,
+                                    suggest models, etc.
+                                </li>
+                                <li>
+                                    <b>Research sessions:</b>
+                                    discuss with our experts research topics of interest or recent advancements in
+                                    the field.
+                                </li>
+                                <li>
+                                    <b>Optimization sessions:</b>
+                                    our optimization experts provide guidance on how to run your models at the
+                                    lowest latencies/highest throughputs.
+                                </li>
+                                <li>
+                                    <b>Iteration sessions:</b>
+                                    discuss current progress on a project and get expert advice on how to further
+                                    improve results.
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="faq-content-right">
+                    <dl class="faq-content-right-first">
+                        <dt class="faq-content-title">Who do I engage with on the Hugging Face team?</dt>
+                        <dd class="faq-content-text">Your primary point of contact is a machine learning engineer that
+                            is assigned to your
+                            account. Based on the
+                            specific needs of your business, they will loop in other Hugging Face experts that are
+                            relevant to your
+                            current challenges.</dd>
+                    </dl>
+                    <dl class="faq-content-right-first">
+                        <dt class="faq-content-title">Can I get your team to provide details specifically on my use
+                            case?</dt>
+                        <dd class="faq-content-text">Absolutely! The Hugging Face team is filled with experts with a
+                            diverse range of
+                            experiences, and they are
+                            ready to help accelerate your unique project.</dd>
+                    </dl>
+                    <dl>
+                        <dt class="faq-content-title">How do you price support for different size orgs?</dt>
+                        <dd class="faq-content-text">We have seat-based pricing for both individuals and departments to
+                            get access to our experts
+                            on an annual
+                            commitment. Please fill out the form below so we can better understand your needs and send
+                            you detailed
+                            pricing information.</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <!-- question部分 -->
+        <div class="question-section">
+            <div class="intro-section">
+                <div class="intro-left">
+                    <h2 class="intro-title">About Hugging Face</h2>
+                    <p class="intro-text">We are the creators of Transformers,the leading open source library for data
+                        scientists and
+                        machine learning engineers to explore
+                        state-of-the-art models and build machine learning features. We are on a mission to democratize
+                        AI, one
+                        commit at a time!</p>
+                </div>
+                <div class="intro-left-pic">
+                    <img src="images/team.png">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-logo">
+                    <img src="images/huggingface_logo (1).svg">
+                </div>
+                <h2 class="form-title">Ready to accelerate your ML roadmap?</h2>
+                <p class="form-content">Move 10x faster with guidance from our experts</p>
+
+                <form>
+                    <div class="form-box">
+                        <input class="form-input" type="text" placeholder="Name" required>
+                        <input class="form-input" type="email" placeholder="Business email" required>
+                        <input class="form-input" type="text" placeholder="Company name" required>
+                        <select class="form-input" required>
+                            <option value>Select country</option>
+                        </select>
+                        <textarea class="form-input-last"
+                            placeholder="What Enterprise feature is most important to your organization?" rows="5"
+                            required></textarea>
+                    </div>
+                    <div class="form-bottom">
+                        <div class="form-btn-box">
+                            <a class="form-btn" href="javascript:;">Request a quote</a>
+                        </div>
+                        <p>to accelerate ML at your company</p>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 底部footer -->
+    <footer class="page-footer">
+        <div class="footer-section">
+            <div class="footer-container">
+                <div class="footer-title">Website</div>
+                <ul>
+                    <li><a href="javascript:;">Models</a></li>
+                    <li><a href="javascript:;">Datasets</a></li>
+                    <li><a href="javascript:;">Spaces</a></li>
+                    <li><a href="javascript:;">Tasks</a></li>
+                    <li><a href="javascript:;">Inference Endpoints</a></li>
+                    <li><a href="javascript:;">Expert Acceleration Program</a></li>
+                </ul>
+            </div>
+            <div class="footer-container">
+                <div class="footer-title">Company</div>
+                <ul>
+                    <li><a href="javascript:;">About</a></li>
+                    <li><a href="javascript:;">HF Store</a></li>
+                    <li><a href="javascript:;">Brand assets</a></li>
+                    <li><a href="javascript:;">Terms of service</a></li>
+                    <li><a href="javascript:;">Privacy</a></li>
+                    <li><a href="javascript:;">Jobs</a></li>
+                    <li><a href="javascript:;">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-container">
+                <div class="footer-title">Resources</div>
+                <ul>
+                    <li><a href="javascript:;">Learn</a></li>
+                    <li><a href="javascript:;">Documentation</a></li>
+                    <li><a href="javascript:;">Blog</a></li>
+                    <li><a href="javascript:;">Forum</a></li>
+                    <li><a href="javascript:;">Service Status</a></li>
+                </ul>
+            </div>
+            <div class="footer-container">
+                <div class="footer-title">Social</div>
+                <ul>
+                    <li><a href="javascript:;">GitHub</a></li>
+                    <li><a href="javascript:;">Twitter</a></li>
+                    <li><a href="javascript:;">Linkedln</a></li>
+                    <li><a href="javascript:;">Discord</a></li>
+                    <li><a href="javascript:;">Zhihu</a></li>
+                    <li><a href="javascript:;">WeChat</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
